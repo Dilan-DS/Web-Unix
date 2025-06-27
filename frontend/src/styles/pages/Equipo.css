@@ -1,0 +1,114 @@
+.team-section {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  margin: 0;
+  background: #ffffff; /* Fondo blanco */
+  color: #333;
+  text-align: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  color: #003366;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.team-card {
+  background-color: #f5f5f5; /* Tarjeta gris clarito */
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+}
+
+.team-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #00bcd4;
+}
+
+.team-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #003366;
+}
+
+.team-card p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  word-break: break-word;
+  text-align: center;
+}
+
+/* ====== Responsive para pantallas menores a 768px ====== */
+@media (max-width: 768px) {
+  .team-section {
+    padding: 3rem 1rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .team-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .team-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ====== Responsive para pantallas ultra pequeñas (<400px) ====== */
+@media (max-width: 400px) {
+  .team-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .team-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .team-card p {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,171 @@
+/* === CONTENEDOR PRINCIPAL DE CADA SEMANA === */
+.semana1-container {
+  padding: 2rem 1rem;
+  background-color: #fefefe;
+  color: #222; /* Texto oscuro para buen contraste */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  animation: fadeIn 0.8s ease-in-out;
+  max-width: 1100px;
+  margin: 2rem auto;
+  box-sizing: border-box;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem); /* texto adaptable */
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === TÍTULOS H2 === */
+.semana1-container h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #003366;
+  margin-top: 2rem;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.semana1-container h2:hover {
+  color: #0055aa;
+}
+
+/* === LISTAS === */
+.semana1-container ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.semana1-container ul li {
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  cursor: default;
+}
+
+.semana1-container ul li:hover {
+  transform: translateX(5px);
+  color: #007acc;
+}
+
+/* === TEXTO EN <code> INLINE === */
+.semana1-container code {
+  background-color: #e8eff6;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  word-wrap: break-word;
+  font-family: 'Courier New', monospace;
+}
+
+/* === ENLACES === */
+.semana1-container a {
+  color: #007acc;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+.semana1-container a:hover {
+  color: #005f99;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* === CONTENEDOR DE CÓDIGO Y EXPLICACIÓN === */
+.comando-explicacion-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  animation: fadeIn 0.8s ease-in-out;
+  box-sizing: border-box;
+}
+
+/* === CAJAS DE CÓDIGO Y EXPLICACIÓN === */
+.comando-explicacion-grid pre,
+.comando-explicacion-grid .explicacion {
+  flex: 1 1 auto; /* flexible para que encaje en pantallas chicas */
+  min-width: 0;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+/* CÓDIGO */
+.comando-explicacion-grid pre {
+  background-color: #f0f7ff;
+  border-left: 5px solid #007acc;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+  color: #222;
+}
+
+/* EXPLICACIÓN */
+.comando-explicacion-grid .explicacion {
+  background-color: #fff9ec;
+  border-left: 5px solid #f0a202;
+  color: #222;
+}
+
+/* Hover en ambas cajas */
+.comando-explicacion-grid pre:hover,
+.comando-explicacion-grid .explicacion:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Líneas internas destacables */
+.comando-explicacion-grid pre span,
+.comando-explicacion-grid .explicacion p {
+  margin: 0;
+  padding: 0.3rem 0;
+  line-height: 1.5;
+  transition: background-color 0.2s ease;
+}
+
+.comando-explicacion-grid pre span:hover,
+.comando-explicacion-grid .explicacion p:hover {
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 4px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .comando-explicacion-grid {
+    flex-direction: column;
+  }
+
+  .comando-explicacion-grid pre,
+  .comando-explicacion-grid .explicacion {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .semana1-container {
+    padding: 1rem 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .semana1-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .comando-explicacion-grid pre,
+  .comando-explicacion-grid .explicacion {
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
+}
