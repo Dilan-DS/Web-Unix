@@ -272,7 +272,7 @@ body {
   }
 
   .intro-texto {
-    text-align: center;
+    text-align: left; /* <-- aquí lo cambiamos */
   }
 
   .home-image {
@@ -288,3 +288,4 @@ body {
     max-width: 300px;
   }
 }
+

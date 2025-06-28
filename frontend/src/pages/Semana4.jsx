@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import '../styles/pages/Semana1.css'
 import SemanaCard from '../components/SemanaCard'
+import { 
+  marcarParteComoCompletada, 
+  obtenerProgresoSemana, 
+  obtenerNotaQuiz 
+} from '../utils/progreso';
 
 const Semana4 = () => {
+
+  useEffect(() => {
+      // Marca automáticamente como leídos los objetivos y la práctica
+      marcarParteComoCompletada("semana4", "objetivos");
+      marcarParteComoCompletada("semana4", "practica");
+    }, []);
+  
+    // Se obtiene el progreso y la nota guardada desde localStorage
+    const progreso = obtenerProgresoSemana("semana4");
+    const nota = obtenerNotaQuiz("semana4");
   return (
     <div className="semana1-container">
       <SemanaCard
@@ -11,6 +26,10 @@ const Semana4 = () => {
         video="https://youtu.be/TU_ENLACE_VIDEO"
         quiz="/quiz/semana4"
       />
+      <div style={{ marginTop: '1rem' }}>
+        <p>📈 Progreso actual: {progreso}%</p>
+        {nota !== null && <p>📝 Nota del quiz: {nota}/10</p>}
+      </div>
 
       <section style={{ marginTop: '2rem' }}>
         <h2>🧠 Objetivos</h2>

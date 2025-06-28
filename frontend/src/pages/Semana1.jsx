@@ -1,16 +1,36 @@
-import React from 'react'
-import '../styles/pages/Semana1.css'
-import SemanaCard from '../components/SemanaCard'
+import React, { useEffect } from 'react';
+import '../styles/pages/Semana1.css';
+import SemanaCard from '../components/SemanaCard';
+import { 
+  marcarParteComoCompletada, 
+  obtenerProgresoSemana, 
+  obtenerNotaQuiz 
+} from '../utils/progreso';
 
 const Semana1 = () => {
+  useEffect(() => {
+    // Marca automáticamente como leídos los objetivos y la práctica
+    marcarParteComoCompletada("semana1", "objetivos");
+    marcarParteComoCompletada("semana1", "practica");
+  }, []);
+
+  // Se obtiene el progreso y la nota guardada desde localStorage
+  const progreso = obtenerProgresoSemana("semana1");
+  const nota = obtenerNotaQuiz("semana1");
+
   return (
     <div className="semana1-container">
       <SemanaCard
         titulo="Semana 1: Gestión de Logs en Linux"
         descripcion="Se estudia la visualización, rotación, análisis, monitoreo y respaldo remoto de logs en sistemas GNU/Linux."
-        video="https://youtu.be/TU_ENLACE_VIDEO"
+        video="https://www.youtube.com/watch?v=QHKy5xsY0dk"
         quiz="/quiz-1"
       />
+
+      <div style={{ marginTop: '1rem' }}>
+        <p>📈 Progreso actual: {progreso}%</p>
+        {nota !== null && <p>📝 Nota del quiz: {nota}/10</p>}
+      </div>
 
       <section style={{ marginTop: '2rem' }}>
         <h2>🧠 Objetivos</h2>

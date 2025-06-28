@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { preguntasSemana3 } from '../data/preguntasSemana3'
+import { guardarNotaQuiz, marcarParteComoCompletada } from '../utils/progreso'
 
 const obtenerPreguntasAleatorias = (preguntas, cantidad) => {
   const mezcladas = [...preguntas].sort(() => Math.random() - 0.5)
@@ -39,6 +40,10 @@ const Quiz3 = () => {
     })
     setPuntaje(puntos)
     setMostrarResultados(true)
+
+    // Guarda progreso y nota en localStorage
+    marcarParteComoCompletada('semana3', 'quiz')
+    guardarNotaQuiz('semana3', puntos)
   }
 
   const reiniciarQuiz = () => {

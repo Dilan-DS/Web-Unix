@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/pages/Home.css';
 
+
 const Home = () => {
   const [showIntro, setShowIntro] = useState(true);
 

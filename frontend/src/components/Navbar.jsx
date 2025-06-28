@@ -7,16 +7,17 @@ import '../styles/components/Navbar.css'
 const Navbar = () => {
   const [mostrarDropdown, setMostrarDropdown] = useState(null)
   const [menuAbierto, setMenuAbierto] = useState(false)
+  const [modoOscuro, setModoOscuro] = useState(false)
 
   const esMovil = window.innerWidth <= 768
 
-  // Alternar dropdown por nombre ('semanas' o 'quices')
   const toggleDropdown = (nombre) => {
-    if (mostrarDropdown === nombre) {
-      setMostrarDropdown(null)
-    } else {
-      setMostrarDropdown(nombre)
-    }
+    setMostrarDropdown(mostrarDropdown === nombre ? null : nombre)
+  }
+
+  const toggleDarkMode = () => {
+    document.body.classList.toggle('modo-oscuro')
+    setModoOscuro(prev => !prev)
   }
 
   return (
@@ -25,30 +26,20 @@ const Navbar = () => {
         <div className="hamburger" onClick={() => setMenuAbierto(!menuAbierto)}>☰</div>
         <div className="navbar-logo">📡 Introducción a Unix</div>
       </div>
+
       <div className={`navbar-links-container ${menuAbierto ? 'abierto' : ''}`}>
         <div className="navbar-links">
           <Link to="/" className="nav-link" onClick={() => setMenuAbierto(false)}>Inicio</Link>
           <Link to="/sobre-curso" className="nav-link" onClick={() => setMenuAbierto(false)}>Sobre el curso</Link>
 
-          {/* Semanas con link y flecha para dropdown */}
+          {/* Dropdown Semanas */}
           <div
             className="nav-link dropdown-trigger"
             onMouseEnter={!esMovil ? () => setMostrarDropdown('semanas') : undefined}
             onMouseLeave={!esMovil ? () => setMostrarDropdown(null) : undefined}
           >
-            <Link to="/semanas" className="nav-link" onClick={() => setMenuAbierto(false)}>
-              Semanas
-            </Link>
-            <button
-              className="dropdown-arrow"
-              onClick={(e) => {
-                e.preventDefault()
-                toggleDropdown('semanas')
-              }}
-              aria-label="Toggle semanas dropdown"
-            >
-              ⬇
-            </button>
+            <Link to="/semanas" className="nav-link" onClick={() => setMenuAbierto(false)}>Semanas</Link>
+            <button className="dropdown-arrow" onClick={(e) => { e.preventDefault(); toggleDropdown('semanas') }}>⬇</button>
             {mostrarDropdown === 'semanas' && (
               <div className="dropdown-menu">
                 {semanas.map((semana) => (
@@ -68,25 +59,14 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Quizzes con link y flecha para dropdown */}
+          {/* Dropdown Quices */}
           <div
             className="nav-link dropdown-trigger"
             onMouseEnter={!esMovil ? () => setMostrarDropdown('quices') : undefined}
             onMouseLeave={!esMovil ? () => setMostrarDropdown(null) : undefined}
           >
-            <Link to="/quices" className="nav-link" onClick={() => setMenuAbierto(false)}>
-              Quizzes
-            </Link>
-            <button
-              className="dropdown-arrow"
-              onClick={(e) => {
-                e.preventDefault()
-                toggleDropdown('quices')
-              }}
-              aria-label="Toggle quizzes dropdown"
-            >
-              ⬇
-            </button>
+            <Link to="/quices" className="nav-link" onClick={() => setMenuAbierto(false)}>Quizzes</Link>
+            <button className="dropdown-arrow" onClick={(e) => { e.preventDefault(); toggleDropdown('quices') }}>⬇</button>
             {mostrarDropdown === 'quices' && (
               <div className="dropdown-menu">
                 {quices.map((quiz) => (
@@ -106,10 +86,18 @@ const Navbar = () => {
             )}
           </div>
 
+          {/* 📊 Ver progreso - junto a quizzes */}
+          <Link to="/progreso" className="nav-link" onClick={() => setMenuAbierto(false)}>Ver progreso</Link>
+
           <Link to="/videos" className="nav-link" onClick={() => setMenuAbierto(false)}>Videos</Link>
           <Link to="/recursos" className="nav-link" onClick={() => setMenuAbierto(false)}>Recursos</Link>
           <Link to="/contacto" className="nav-link" onClick={() => setMenuAbierto(false)}>Contacto</Link>
           <Link to="/equipo" className="nav-link" onClick={() => setMenuAbierto(false)}>Equipo</Link>
+
+          {/* 🌙 Botón modo oscuro - siempre al final */}
+          <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+            {modoOscuro ? '☀️' : '🌙'}
+          </button>
         </div>
       </div>
     </nav>

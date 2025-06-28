@@ -1,0 +1,50 @@
+.progreso-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.progreso-total {
+  margin-bottom: 2rem;
+  background: #e0f7fa;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.progreso-total progress {
+  width: 100%;
+  height: 20px;
+  margin-top: 0.5rem;
+}
+
+.lista-semanas {
+  list-style: none;
+  padding: 0;
+}
+
+.item-semana {
+  margin-bottom: 1.5rem;
+  background: #fff;
+  padding: 1rem;
+  border-left: 5px solid #4caf50;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.titulo-semana {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.item-semana progress {
+  width: 100%;
+  height: 14px;
+}
+
+.nota-quiz {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}

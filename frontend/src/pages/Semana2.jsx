@@ -1,16 +1,35 @@
-import React from 'react'
-import '../styles/pages/Semana2.css'
-import SemanaCard from '../components/SemanaCard'
+import React, { useEffect } from 'react';
+import '../styles/pages/Semana2.css';
+import SemanaCard from '../components/SemanaCard';
+import { 
+  marcarParteComoCompletada, 
+  obtenerProgresoSemana, 
+  obtenerNotaQuiz 
+} from '../utils/progreso';
 
 const Semana2 = () => {
+  useEffect(() => {
+      // Marca automáticamente como leídos los objetivos y la práctica
+      marcarParteComoCompletada("semana2", "objetivos");
+      marcarParteComoCompletada("semana2", "practica");
+    }, []);
+  
+    // Se obtiene el progreso y la nota guardada desde localStorage
+    const progreso = obtenerProgresoSemana("semana1");
+    const nota = obtenerNotaQuiz("semana2");
   return (
     <div className="semana2-container">
       <SemanaCard
         titulo="Semana 2: Procesamiento de Logs con AWK"
         descripcion="Uso del lenguaje AWK para manipular y extraer datos relevantes de logs en GNU/Linux."
-        video="https://TU_VIDEO_SEM2.com"
+        video="https://www.youtube.com/watch?v=YFlEY_4gUVs"
         quiz="/quiz/semana2"
       />
+
+      <div style={{ marginTop: '1rem' }}>
+        <p>📈 Progreso actual: {progreso}%</p>
+        {nota !== null && <p>📝 Nota del quiz: {nota}/10</p>}
+      </div>
 
       <section style={{ marginTop: '2rem' }}>
         <h2>🧠 Objetivos</h2>

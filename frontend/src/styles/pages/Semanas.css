@@ -45,3 +45,95 @@
 .btn-ver:hover {
   background-color: #005999;
 }
+.lista-semanas {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.semana-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5faff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  gap: 1rem;
+}
+
+.titulo-semana {
+  flex: 1;
+  font-weight: bold;
+  color: #003366;
+}
+
+.barra-progreso {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.barra-progreso progress {
+  width: 100px;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.barra-progreso span {
+  font-size: 0.9rem;
+  color: #007acc;
+}
+
+.btn-ver {
+  padding: 0.4rem 0.9rem;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver:hover {
+  background-color: #005f99;
+}
+/* ==== Colores para la barra de progreso ==== */
+.barra {
+  width: 100px;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  appearance: none;
+}
+
+.barra::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+.barra.rojo::-webkit-progress-value {
+  background-color: #e74c3c;
+}
+
+.barra.amarillo::-webkit-progress-value {
+  background-color: #f1c40f;
+}
+
+.barra.verde::-webkit-progress-value {
+  background-color: #2ecc71;
+}
+
+/* Firefox */
+.barra.rojo::-moz-progress-bar {
+  background-color: #e74c3c;
+}
+.barra.amarillo::-moz-progress-bar {
+  background-color: #f1c40f;
+}
+.barra.verde::-moz-progress-bar {
+  background-color: #2ecc71;
+}

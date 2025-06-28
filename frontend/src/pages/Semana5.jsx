@@ -1,16 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import '../styles/pages/Semana5.css'
 import SemanaCard from '../components/SemanaCard'
+import { 
+  marcarParteComoCompletada, 
+  obtenerProgresoSemana, 
+  obtenerNotaQuiz 
+} from '../utils/progreso';
 
 const Semana5 = () => {
+
+  useEffect(() => {
+      // Marca automáticamente como leídos los objetivos y la práctica
+      marcarParteComoCompletada("semana5", "objetivos");
+      marcarParteComoCompletada("semana5", "practica");
+    }, []);
+  
+    // Se obtiene el progreso y la nota guardada desde localStorage
+    const progreso = obtenerProgresoSemana("semana5");
+    const nota = obtenerNotaQuiz("semana5");
   return (
     <div className="semana1-container" style={{ minHeight: '100vh', width: '100vw', padding: '2rem', boxSizing: 'border-box' }}>
       <SemanaCard
         titulo="Semana 5: Servidor Syslog con Múltiples Clientes"
         descripcion="Configuramos un servidor rsyslog que recibe logs de 2 clientes Linux. Todo es automático gracias a cron."
-        video="https://youtu.be/ENLACE_VIDEO"
+        video="https://www.youtube.com/watch?v=q5b1X9cxtYE"
         quiz="/quiz/semana5"
       />
+      <div style={{ marginTop: '1rem' }}>
+        <p>📈 Progreso actual: {progreso}%</p>
+        {nota !== null && <p>📝 Nota del quiz: {nota}/10</p>}
+      </div>
 
       <section style={{ marginTop: '2rem' }}>
         <h2>🧠 Objetivos</h2>

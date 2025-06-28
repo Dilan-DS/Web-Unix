@@ -16,6 +16,7 @@ import QuizSemana5 from './pages/QuicesSemana5'
 import Recursos from './pages/Recursos'
 import Contacto from './pages/Contacto'
 import Equipo from './pages/Equipo'
+import Progreso from './pages/Progreso';
 import Semanas from './pages/Semanas'
 import Semana1 from './pages/Semana1'
 import Semana2 from './pages/Semana2'
@@ -57,6 +58,8 @@ const App = () => {
             <Route path="/quiz/semana3" element={<QuizSemana3 />} />
             <Route path="/quiz/semana4" element={<QuizSemana4 />} />
             <Route path="/quiz/semana5" element={<QuizSemana5 />} />
+
+            <Route path="/progreso" element={<Progreso />} />
 
           </Routes>
         </div>

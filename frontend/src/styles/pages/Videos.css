@@ -1,39 +1,35 @@
-.videos-container {
-  width: 100vw;                 /* Todo el ancho de la ventana */
-  height: 100vh;                /* Todo el alto de la ventana */
-  padding: 2rem;
-  background-color: #f9fafc;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  box-sizing: border-box;
-  overflow-y: auto;            /* Si el contenido es muy grande, permite scroll */
+.video-card {
+  background-color: #ffffff;
+  border: 2px solid #dbe9f4;
+  border-left: 6px solid #007acc;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
-.videos-container h1 {
-  font-size: 1.8rem;
+.video-card h2 {
+  margin-top: 0;
   color: #003366;
-  margin-bottom: 1.2rem;
-  border-bottom: 2px solid #00bcd4;
-  padding-bottom: 0.5rem;
 }
 
-.videos-container ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.video-card p {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 1rem;
+  color: #444;
 }
 
-.videos-container li {
-  margin-bottom: 1rem;
-}
-
-.videos-container a {
+.video-card a {
+  display: inline-block;
+  background-color: #007acc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   text-decoration: none;
-  color: #007acc;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.videos-container a:hover {
-  color: #005999;
+.video-card a:hover {
+  background-color: #005999;
 }
