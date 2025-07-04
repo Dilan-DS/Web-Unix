@@ -13,6 +13,9 @@ import QuizSemana2 from './pages/QuicesSemana2'
 import QuizSemana3 from './pages/QuicesSemana3'
 import QuizSemana4 from './pages/QuicesSemana4'
 import QuizSemana5 from './pages/QuicesSemana5'
+import QuizSemana6 from './pages/QuicesSemana6'
+import QuizSemana7 from './pages/QuicesSemana7'
+import QuizSemana8 from './pages/QuicesSemana8'
 import Recursos from './pages/Recursos'
 import Contacto from './pages/Contacto'
 import Equipo from './pages/Equipo'
@@ -23,6 +26,9 @@ import Semana2 from './pages/Semana2'
 import Semana3 from './pages/Semana3'
 import Semana4 from './pages/Semana4'
 import Semana5 from './pages/Semana5'
+import Semana6 from './pages/Semana6'
+import Semana7 from './pages/Semana7'
+import Semana8 from './pages/Semana8'
 
 const App = () => {
   return (
@@ -51,6 +57,9 @@ const App = () => {
             <Route path="/semana3" element={<Semana3 />} />
             <Route path="/semana4" element={<Semana4 />} />
             <Route path="/semana5" element={<Semana5 />} />
+            <Route path="/semana6" element={<Semana6 />} />
+            <Route path="/semana7" element={<Semana7 />} />
+            <Route path="/semana8" element={<Semana8 />} />
 
             {/* Quices individuales */}
             <Route path="/quiz-1" element={<QuizSemana1 />} />
@@ -58,6 +67,9 @@ const App = () => {
             <Route path="/quiz/semana3" element={<QuizSemana3 />} />
             <Route path="/quiz/semana4" element={<QuizSemana4 />} />
             <Route path="/quiz/semana5" element={<QuizSemana5 />} />
+            <Route path="/quiz/semana6" element={<QuizSemana6 />} />
+            <Route path="/quiz/semana7" element={<QuizSemana7 />} />
+            <Route path="/quiz/semana8" element={<QuizSemana8 />} />
 
             <Route path="/progreso" element={<Progreso />} />
 

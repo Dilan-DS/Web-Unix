@@ -32,19 +32,19 @@ export const quices = [
   {
     id: 6,
     titulo: 'Quiz Semana 6:',
-    ruta: '',
+    ruta: '/quiz/semana6',
     descripcion: ''
   },
   {
     id: 7,
     titulo: 'Quiz Semana 7:',
-    ruta: '',
+    ruta: '/quiz/semana7',
     descripcion: ''
   },
   {
     id: 8,
     titulo: 'Quiz Semana 8:',
-    ruta: '',
+    ruta: '/quiz/semana7',
     descripcion: ''
   },
   {

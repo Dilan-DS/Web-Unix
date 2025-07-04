@@ -12,19 +12,19 @@ export const semanas = [
   {
     id: 6,
     titulo: 'Quiz Semana 6:',
-    ruta: '',
+    ruta: '/semana6',
     descripcion: ''
   },
   {
     id: 7,
     titulo: 'Quiz Semana 7:',
-    ruta: '',
+    ruta: '/semana7',
     descripcion: ''
   },
   {
     id: 8,
     titulo: 'Quiz Semana 8:',
-    ruta: '',
+    ruta: 'semana8',
     descripcion: ''
   },
   {

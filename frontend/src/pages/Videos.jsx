@@ -63,7 +63,108 @@ const Videos = () => {
         </a>
       </div>
 
-      {/* Aquí puedes seguir con las semanas 6 a 16 siguiendo el mismo formato */}
+      {/* Semana 6 */}
+      <div className="video-card">
+        <h2>📹 Video 6 (Semana 6): Centralización de logs</h2>
+        <p>
+          ✏️ Configura rsyslog para recibir registros desde varios clientes Linux y automatiza la recolección con cron.
+        </p>
+        <a href="https://www.youtube.com/watch?v=q5b1X9cxtYE" target="_blank" rel="noopener noreferrer">
+          🔗 Ver en YouTube
+        </a>
+      </div>
+
+      {/* Semana 7 */}
+      <div className="video-card">
+        <h2>📹 Video 7 (Semana 7): Centralización de logs</h2>
+        <p>
+          ✏️ Configura rsyslog para recibir registros desde varios clientes Linux y automatiza la recolección con cron.
+        </p>
+        <a href="https://www.youtube.com/watch?v=q5b1X9cxtYE" target="_blank" rel="noopener noreferrer">
+          🔗 Ver en YouTube
+        </a>
+      </div>
+
+      {/* Semana 8 */}
+      <div className="video-card">
+        <h2>📹 Video 8 (Semana 8): Centralización de logs</h2>
+        <p>
+          ✏️ Configura rsyslog para recibir registros desde varios clientes Linux y automatiza la recolección con cron.
+        </p>
+        <a href="https://www.youtube.com/watch?v=q5b1X9cxtYE" target="_blank" rel="noopener noreferrer">
+          🔗 Ver en YouTube
+        </a>
+      </div>
+      {/* Semana 9 */}
+      <div className="video-card">
+        <h2>📹 Video 9 (Semana 9): Centralización de logs</h2>
+        <p>
+          ✏️ Configura rsyslog para recibir registros desde varios clientes Linux y automatiza la recolección con cron.
+        </p>
+        <a href="https://www.youtube.com/watch?v=q5b1X9cxtYE" target="_blank" rel="noopener noreferrer">
+          🔗 Ver en YouTube
+        </a>
+      </div>
+      {/* Semana 10 */}
+      <div className="video-card">
+        <h2>📹 Video 10 (Semana 10): Centralización de logs</h2>
+        <p>
+          ✏️ Configura rsyslog para recibir registros desde varios clientes Linux y automatiza la recolección con cron.
+        </p>
+        <a href="https://www.youtube.com/watch?v=q5b1X9cxtYE" target="_blank" rel="noopener noreferrer">
+          🔗 Ver en YouTube
+        </a>
+      </div>
+      {/* Semana 11 */}
+      <div className="video-card">
+        <h2>📹 Video 11 (Semana 12): Centralización de logs</h2>
+        <p>
+          ✏️ Configura rsyslog para recibir registros desde varios clientes Linux y automatiza la recolección con cron.
+        </p>
+        <a href="https://www.youtube.com/watch?v=q5b1X9cxtYE" target="_blank" rel="noopener noreferrer">
+          🔗 Ver en YouTube
+        </a>
+      </div>
+      {/* Semana 12 */}
+      <div className="video-card">
+        <h2>📹 Video 12 (Semana 12): Centralización de logs</h2>
+        <p>
+          ✏️ Configura rsyslog para recibir registros desde varios clientes Linux y automatiza la recolección con cron.
+        </p>
+        <a href="https://www.youtube.com/watch?v=q5b1X9cxtYE" target="_blank" rel="noopener noreferrer">
+          🔗 Ver en YouTube
+        </a>
+      </div>
+      {/* Semana 13 */}
+      <div className="video-card">
+        <h2>📹 Video 13 (Semana 13): Centralización de logs</h2>
+        <p>
+          ✏️ Configura rsyslog para recibir registros desde varios clientes Linux y automatiza la recolección con cron.
+        </p>
+        <a href="https://www.youtube.com/watch?v=q5b1X9cxtYE" target="_blank" rel="noopener noreferrer">
+          🔗 Ver en YouTube
+        </a>
+      </div>
+      {/* Semana 14 */}
+      <div className="video-card">
+        <h2>📹 Video 14 (Semana 14): Centralización de logs</h2>
+        <p>
+          ✏️ Configura rsyslog para recibir registros desde varios clientes Linux y automatiza la recolección con cron.
+        </p>
+        <a href="https://www.youtube.com/watch?v=q5b1X9cxtYE" target="_blank" rel="noopener noreferrer">
+          🔗 Ver en YouTube
+        </a>
+      </div>
+      {/* Semana 15 */}
+      <div className="video-card">
+        <h2>📹 Video 15 (Semana 15): Centralización de logs</h2>
+        <p>
+          ✏️ Configura rsyslog para recibir registros desde varios clientes Linux y automatiza la recolección con cron.
+        </p>
+        <a href="https://www.youtube.com/watch?v=q5b1X9cxtYE" target="_blank" rel="noopener noreferrer">
+          🔗 Ver en YouTube
+        </a>
+      </div>
     </div>
   );
 };
