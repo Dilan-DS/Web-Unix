@@ -29,6 +29,7 @@ import Semana5 from './pages/Semana5'
 import Semana6 from './pages/Semana6'
 import Semana7 from './pages/Semana7'
 import Semana8 from './pages/Semana8'
+import Semana9 from './pages/Semana9'
 
 const App = () => {
   return (
@@ -60,6 +61,7 @@ const App = () => {
             <Route path="/semana6" element={<Semana6 />} />
             <Route path="/semana7" element={<Semana7 />} />
             <Route path="/semana8" element={<Semana8 />} />
+            <Route path="/semana9" element={<Semana9 />} />
 
             {/* Quices individuales */}
             <Route path="/quiz-1" element={<QuizSemana1 />} />
