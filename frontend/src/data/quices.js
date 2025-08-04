@@ -31,25 +31,25 @@ export const quices = [
   },
   {
     id: 6,
-    titulo: 'Quiz Semana 6:',
+    titulo: 'Quiz Semana 6: Bash Scripting - Variables y Expresiones',
     ruta: '/quiz/semana6',
     descripcion: ''
   },
   {
     id: 7,
-    titulo: 'Quiz Semana 7:',
+    titulo: 'Quiz Semana 7: Bash Scripting - Flujos de Control en Estructuras Selectivas',
     ruta: '/quiz/semana7',
     descripcion: ''
   },
   {
     id: 8,
-    titulo: 'Quiz Semana 8:',
+    titulo: 'Quiz Semana 8: Bash Scripting - Flujos de Control en Estructuras Repetitivas',
     ruta: '/quiz/semana7',
     descripcion: ''
   },
   {
     id: 9,
-    titulo: 'Quiz Semana 9:',
+    titulo: 'Quiz Semana 9: picoCTF',
     ruta: '',
     descripcion: ''
   },
@@ -61,20 +61,20 @@ export const quices = [
   },
   {
     id: 11,
-    titulo: 'Quiz Semana 12:',
-    ruta: '',
+    titulo: 'Quiz Semana 11: picoCTF',
+    ruta: '/quiz/semana11',
     descripcion: ''
   },
   {
     id: 12,
-    titulo: 'Quiz Semana 12:',
-    ruta: '',
-    descripcion: ''
+    titulo: 'Quiz Semana 12: picoCTF',
+    ruta: '/quiz/semana12',
+    descripcion: ' The File System in UNIX'
   },
   {
     id: 13,
-    titulo: 'Quiz Semana 13:',
-    ruta: '',
+    titulo: 'Quiz Semana 13: picoCTF',
+    ruta: '/quiz/semana13',
     descripcion: ''
   },
   {

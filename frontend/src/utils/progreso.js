@@ -58,19 +58,19 @@ export const obtenerTodasLasSemanas = () => [
   { id: "semana2", titulo: "Semana 2: Awk", ruta: "/semana2" },
   { id: "semana3", titulo: "Semana 3: Python Scripts", ruta: "/semana3" },
   { id: "semana4", titulo: "Semana 4: Perl Scripting", ruta: "/semana4" },
-  { id: "semana5", titulo: "Semana 5: Evaluacion", ruta: "/semana5" },
-  { id: "semana6", titulo: "Semana 6", ruta: "/semana6" },
-  { id: "semana7", titulo: "Semana 7", ruta: "/semana7" },
-  { id: "semana8", titulo: "Semana 8", ruta: "/semana8" },
-  { id: "semana9", titulo: "Semana 9", ruta: "/semana9" },
-  { id: "semana10", titulo: "Semana 10", ruta: "/semana10" },
-  { id: "semana11", titulo: "Semana 11", ruta: "/semana11" },
-  { id: "semana12", titulo: "Semana 12", ruta: "/semana12" },
-  { id: "semana13", titulo: "Semana 13", ruta: "/semana13" },
+  { id: "semana5", titulo: "Semana 5: Evaluación", ruta: "/semana5" },
+  { id: "semana6", titulo: "Semana 6: Bash Variables y Expresiones", ruta: "/semana6" },
+  { id: "semana7", titulo: "Semana 7: Bash Estructuras Selectivas", ruta: "/semana7" },
+  { id: "semana8", titulo: "Semana 8: Bash Estructuras Repetitivas", ruta: "/semana8" },
+  { id: "semana9", titulo: "Semana 9: PicoCTF Intro", ruta: "/semana9" },
+  { id: "semana10", titulo: "Semana 10: PicoCTF Intermedio", ruta: "/semana10" },
+  { id: "semana11", titulo: "Semana 11: Retos PicoCTF", ruta: "/semana11" },
+  { id: "semana12", titulo: "Semana 12: File System en UNIX", ruta: "/semana12" },
+  { id: "semana13", titulo: "Semana 13: PicoCTF Final", ruta: "/semana13" },
   { id: "semana14", titulo: "Semana 14", ruta: "/semana14" },
   { id: "semana15", titulo: "Semana 15", ruta: "/semana15" },
-  { id: "semana16", titulo: "Semana 16", ruta: "/semana16" }
-];
+]
+
 
 
 // 📊 Calcula el promedio global de progreso
